@@ -126,8 +126,8 @@
 			dataObject.turn = 0;
 			dataObject.selection = [-1, -1];
 			dataObject.oppositePlanes = [],
-				dataObject.collisionSpot = [-1, -1],
-				dataObject.planeData = simulate(data[1][0], data[1][1], data[2]);
+			dataObject.collisionSpot = [-1, -1],
+			dataObject.planeData = simulate(data[1][0], data[1][1], data[2]);
 			dataObject.ctx = ctx;
 			dataObject.canvas = canvas;
 			dataObject.width = data[1][0];
@@ -206,6 +206,7 @@
 
 			buttonAutoPlay.addEventListener("click", function () {
 				dataObject.turn = 0;
+				refresh(dataObject);
 				buttonAutoPlay.disabled = true;
 				dataObject.playingAnimation = true;
 				window.setTimeout(function () { autoPlay(dataObject); }, 1000);
