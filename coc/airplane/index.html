@@ -1,48 +1,43 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Air traffic control</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-	<title>Air traffic control</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <body>
+    <h1 style="text-align: center">Air traffic control</h1>
 
-</head>
+    <img src="pU.png" id="planeUp" style="display: none" />
+    <img src="pL.png" id="planeLeft" style="display: none" />
+    <img src="pD.png" id="planeDown" style="display: none" />
+    <img src="pR.png" id="planeRight" style="display: none" />
+    <img src="collision.png" id="collision" style="display: none" />
 
-<body>
+    <canvas id="buffer" width="128" height="128" style="display: none"></canvas>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="jumbotron">
+            <div id="container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<h1 style="text-align: center;">Air traffic control</h1>
+    <script src="lodash.min.js"></script>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
 
-	<img src="pU.png" id="planeUp" style="display:none" />
-	<img src="pL.png" id="planeLeft" style="display:none" />
-	<img src="pD.png" id="planeDown" style="display:none" />
-	<img src="pR.png" id="planeRight" style="display:none" />
-	<img src="collision.png" id="collision" style="display:none" />
-
-	<canvas id="buffer" width="128" height="128" style="display:none"></canvas>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="jumbotron">
-					<div id="container"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-	
-	<script src="lodash.min.js"></script>
-
-
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-		crossorigin="anonymous"></script>
-
-	<script src="run.min.js"></script>
-
-</body>
-
+    <script src="run.min.js"></script>
+  </body>
 </html>
